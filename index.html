@@ -10,6 +10,7 @@
       <h1><div id="html_element">reCAPTCHA</div></h1>
       <p>不審なリクエスト(なんかいも更新したり何回もボタンを押したり)すると、作成者側に送信されます。</p>
       <p>もう一度したい場合は、<button onclick="window.onload()">更新</button>ボタンを押してください。</p>
+      <p>当サイトはGoogle Analyticsを利用しています。</p>
       <br>
       <input type="submit" value="Submit">
     </form>
@@ -22,6 +23,15 @@
           'sitekey' : '6LcRdFApAAAAAC6D6CLuquAmeqycvdsixwtEMarJ'
         });
       };
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYXSM4RGZB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZYXSM4RGZB');
     </script>
   </body>
 </html>
