@@ -1,22 +1,27 @@
-<html>
-  <head>
-    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reCAPTCHA</title>
+</head>
+<body>
+    <form action="https://penguin-123456.github.io/recaptcha/submit.html" method="GET">
+      <h1><div id="html_element">reCAPTCHA</div></h1>
+      <p>不審なリクエスト(なんかいも更新したり何回もボタンを押したり)すると、作成者側に送信されます。</p>
+      <p>もう一度したい場合は、<button onclick="window.onload()">更新</button>ボタンを押してください。</p>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
     <script type="text/javascript">
       var onloadCallback = function() {
         grecaptcha.render('html_element', {
           'sitekey' : '6LcRdFApAAAAAC6D6CLuquAmeqycvdsixwtEMarJ'
         });
       };
-    </script>
-  </head>
-  <body>
-    <form action="https://penguin-123456.github.io/recaptcha/submit.html" method="GET">
-      <div id="html_element"></div>
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
     </script>
   </body>
 </html>
