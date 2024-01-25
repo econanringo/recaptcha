@@ -1,0 +1,61 @@
+<!--                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                             0                                                                                                                                                           
+                                   0  00           00          00   00                                        00                                                          0      0     00   00       00  00              00                          00             00                           00              00                              0       
+    0000000         000000        00   00         00  0        00000000000                       000000       00                                        00      00        00   0000   00  000 00     00  00000000        00         0000000          00             00            00             00              00                              0       
+    0000000       000000000      000   000     00000000       00    00                     000000000000       00          0              0              00      00        00    00   00 0 00 000    000000         0000000000000     000000          00   0         00            00            000  000         0 0  0      0                   0       
+       000       000  0   00     00     00       00           00    00                     0000  000       00000000       0      00      0      00      00      000       00    0    0 00  000000   000000000000         00             00         000000 00     00000000         00          00000000 00     0000000 000    0      00           00000   
+       0         00  00    00   00       000     00000        00 000000000     0000000          00            00          0       00     0       00     00  00000000       000000      00   00 000  000 000 0  0       0000            00        000000 00 00       00            00             000   00       00     000   0       00          00      
+                00   00    00  0000000000000    000 00  00   000 00 00  00   00000  000         0             00          00      000    00      000    00      00         0000       00 000000000  000  00 0  0      00 00           000000        00  00  00      00            00             00    00      00    00 00   00      000         0       
+                00   00    00  0    0   00      00   00000   000 00 00  00    0      00        00          00000000       00       00    00       00    00      00       000         000   00    0 0000  0  0 00      00  0          000   00       00  00  00   00000000         00            000    0       00    00      00       00         0       
+   00           00   0     00      00   00     00  0000      000 000000000           00        00           000000  0     00       00    00       00    000     00      00          0000  0000000  000000000000000    00 000        00      00     00   00   0    000000  0       00            000    0       0     00      00       00        00       
+   0            00  00    000      00   00     0  00000       00 00 00  00           00        00            00     00    00  00    00   00  00    00   000     0       0             00 0000 00     00  0 00 00       0000        00       00     00   00         00     00      00      0    0000    0      00     00      00  00    00    0000000     
+  00             0000    000      00    00       000 00       00  0000              000        000           00     00    00  00         00  00         000    00      00             00 0000000     00 00 00 00         00          00000  00    00    0          00     00      00     00   00 00    0 00  00   00000      00  00         00   00000   
+   000    00     0000  0000      000   000       00           00   000          000000          0000          0     00     0000           0000          00     00       000     0     00 0  000      00 000000000       000          00 00000     00 0 00           0     00      00    00       00    0000   0  00  00000    0000          00  00  00   
+    000000000         0000      000  0000        000   00     00  0000000       000              00000        00  000       000            000           0   000         00000000     00  00000000   00 00    00       000            000000      0  0000           00  000       000 000        00    000       00  00 00     000           00000       
+                                00   0            0000000     000000   000                          0          00000                                         00                       000000   000   00     0000       0                                             00000         00000                          0000                                   -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reCAPTCHA</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="reCAPTCHAで遊べるサイトです。好きな回数ポチポチ押して遊べます。⚠google analytics利用中">
+  <link rel="canonical" href="https://penguin-123456.github.io/recaptcha/">
+  <link rel="icon" size="48x48" href="https://www.gstatic.com/recaptcha/api2/logo_48.png" type="image/png">
+</head>
+<body>
+    <form action="" method="post">
+      <h1><div id="html_element">reCAPTCHA</div></h1>
+      <p>不審なリクエスト(なんかいも更新したり何回もボタンを押したり)すると、作成者側に送信されます。</p>
+      <p>もう一度したい場合は、<button onclick="document.location.reload()">更新</button>ボタンを押してください。</p>
+      <p>当サイトはGoogle Analyticsを利用しています。</p>
+      <br>
+      <input type="submit" value="Submit" onclick="submit()">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LcRdFApAAAAAC6D6CLuquAmeqycvdsixwtEMarJ'
+        });
+      };
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYXSM4RGZB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZYXSM4RGZB');
+    </script>
+  </body>
+  <script>
+    function submit() {
+      window.location.href = "https://penguin-123456.github.io/recaptcha/submit.html";
+    }
+  </script>
+</html>
