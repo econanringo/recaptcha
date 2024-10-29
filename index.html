@@ -57,5 +57,22 @@
     function submit() {
       window.location.href = "https://penguin-123456.github.io/recaptcha/submit.html";
     }
+    let content_area = document.getElementById("content_area");
+
+// 複製
+let clone_element = content_area.cloneNode(true);
+
+// 複製した要素の属性を編集
+clone_element.id = "html_element";
+
+// 複製した要素の子孫要素を編集
+let h2_element = clone_element.querySelector("div");
+h2_element.textContent = '複製した要素';
+
+let h2_element = clone_element.querySelector("div);
+h2_element.textContent = '複製した要素のテキスト';
+
+// 複製したHTML要素をページに挿入
+content_area.after(clone_element);
   </script>
 </html>
